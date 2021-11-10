@@ -10,8 +10,12 @@ function App() {
   const [jobs, setJobs] = useState([])
   const [showJobs, setShowJobs] = useState([])
   const [loading, setLoading] = useState(true)
+  const [moreBtn, setMoreBtn] = useState(false)
 
   // Set State
+  const toggleBtn = tf => {
+    setMoreBtn(!tf)
+  }
 
 
   // Fetch Data
@@ -34,7 +38,7 @@ function App() {
         <main className="main">
           <Header />
           <Nav />
-          <Info showJobs={showJobs} />
+          <Info showJobs={showJobs} moreBtn={moreBtn} toggleBtn={toggleBtn} />
         </main>
       }
     </div>

@@ -1,6 +1,6 @@
-function Button() {
+function Button({ toggleBtn, tf }) {
     return (
-        <button className="btn">
+        <button className="btn" onClick={() => toggleBtn(tf)}>
             More Info
         </button>
     );
