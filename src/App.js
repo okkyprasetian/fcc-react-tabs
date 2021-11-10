@@ -16,6 +16,11 @@ function App() {
   const toggleBtn = tf => {
     setMoreBtn(!tf)
   }
+  const navClick = index => {
+    let newShow = jobs[index]
+    setMoreBtn(false)
+    setShowJobs(newShow)
+  }
 
 
   // Fetch Data
@@ -37,7 +42,7 @@ function App() {
       {loading ? <Loading /> :
         <main className="main">
           <Header />
-          <Nav />
+          <Nav jobs={jobs} navClick={navClick} />
           <Info showJobs={showJobs} moreBtn={moreBtn} toggleBtn={toggleBtn} />
         </main>
       }

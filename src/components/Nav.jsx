@@ -1,9 +1,7 @@
-function Nav() {
+function Nav({ jobs, navClick }) {
     return (
         <nav className="nav">
-            <h2>TOMMY</h2>
-            <h2>BIGDROP</h2>
-            <h2>CUKER</h2>
+            {jobs.map((job, i) => <h2 key={i} onClick={() => navClick(i)} >{job.company}</h2>)}
         </nav>
     );
 }
