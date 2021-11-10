@@ -1,14 +1,19 @@
 import MoreInfo from "./MoreInfo"
 import Button from "./Button"
 
-function Info() {
+function Info({ showJobs }) {
+
+    const moreInfo = me => {
+        me.map(desc => <MoreInfo desc={desc} />)
+    }
+
     return (
         <div className="info">
-            <h2 className="info-job">Full Stack Web Developer</h2>
-            <p className="info-name">Tommy</p>
-            <p className="info-period">December 2015 - Present</p>
+            <h2 className="info-job">{showJobs.title}</h2>
+            <p className="info-name">{showJobs.company}</p>
+            <p className="info-period">{showJobs.dates}</p>
             <div className="info-bottom">
-                {false && <MoreInfo />}
+                {false && moreInfo(showJobs.duties)}
                 <Button />
             </div>
         </div>

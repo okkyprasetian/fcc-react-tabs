@@ -8,6 +8,8 @@ function App() {
 
   // State 
   const [jobs, setJobs] = useState([])
+  const [showJobs, setShowJobs] = useState([])
+  const [loading, setLoading] = useState(true)
 
   // Set State
 
@@ -18,19 +20,21 @@ function App() {
       const response = await fetch('https://course-api.com/react-tabs-project')
       const data = await response.json()
 
-      return data
+      setJobs(data)
+      setShowJobs(data[0])
+      setLoading(false)
     }
 
-    getData().then(data => setJobs(data))
+    getData()
   }, [])
 
   return (
     <div className="App">
-      {false ? <Loading /> :
+      {loading ? <Loading /> :
         <main className="main">
           <Header />
           <Nav />
-          <Info />
+          <Info showJobs={showJobs} />
         </main>
       }
     </div>
