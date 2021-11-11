@@ -16,7 +16,7 @@ function App() {
   const toggleBtn = tf => {
     setMoreBtn(!tf)
   }
-  const navClick = index => {
+  const navClick = (index) => {
     let newShow = jobs[index]
     setMoreBtn(false)
     setShowJobs(newShow)

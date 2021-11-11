@@ -56,7 +56,7 @@
 }
 
 .nav h2:hover {
-  border-bottom: solid 3px var(--theme-brown);
+  border-bottom: 3px solid var(--theme-brown);
 }
 
 .info {
@@ -100,7 +100,65 @@
   margin: 20px auto 0;
   padding: 5px 50px;
   border: none;
+  border-radius: 5px;
   color: var(--theme-white);
   background-color: var(--theme-brown);
   cursor: pointer;
+}
+
+@media screen and (min-width: 729px) {
+  :root {
+    font-size: 20px;
+  }
+
+  .main {
+    grid-template-areas:
+      'header header'
+      'nav info';
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .header {
+    height: 20vh;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav h2 {
+    margin-bottom: 50px;
+    padding: 5px 5px;
+  }
+
+  .nav h2:hover {
+    border: none;
+    border-left: 3px solid var(--theme-brown);
+  }
+
+  .info {
+    height: 50vh;
+    padding-top: 50px;
+  }
+
+  .info-job {
+    font-size: 1.7rem;
+  }
+
+  .info-period {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .more-info {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    margin-top: 60px;
+    padding: 10px 100px;
+  }
 }
