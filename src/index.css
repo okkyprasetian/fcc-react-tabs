@@ -19,6 +19,15 @@
   background-color: var(--theme-white);
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 3rem;
+  color: var(--theme-brown);
+}
+
 .main {
   display: grid;
   grid-template-areas:
@@ -36,6 +45,7 @@
   justify-content: center;
   align-items: center;
   color: var(--theme-brown);
+  font-size: 1.5rem;
   height: 200px;
 }
 
@@ -66,6 +76,7 @@
 .info-job {
   margin-bottom: 20px;
   color: var(--theme-red);
+  font-size: 1.7rem;
 }
 
 .info-name {
