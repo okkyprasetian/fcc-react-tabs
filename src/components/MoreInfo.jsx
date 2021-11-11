@@ -1,8 +1,7 @@
 function MoreInfo({ desc }) {
     return (
         <div className="more-info">
-            {console.log(desc)}
-            {desc}
+            <span className="mark">~~</span> {desc}
         </div>
     );
 }

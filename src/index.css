@@ -6,6 +6,17 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  --theme-white: #f4f0bb;
+  --theme-brown: #43291f;
+  --theme-lightbrown: #5a3d32;
+  --theme-darkgreen: #226f54;
+  --theme-lightgreen: #87c38f;
+  --theme-red: #da2c38;
+}
+
+.App {
+  height: 100vh;
+  background-color: var(--theme-white);
 }
 
 .main {
@@ -24,6 +35,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--theme-brown);
   height: 200px;
 }
 
@@ -31,12 +43,20 @@
   grid-area: nav;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   height: 80px;
 }
 
 .nav h2 {
   margin: 0 20px;
+  padding: 2px 10px;
   font-size: 1.2rem;
+  color: var(--theme-lightbrown);
+  cursor: pointer;
+}
+
+.nav h2:hover {
+  border-bottom: solid 3px var(--theme-brown);
 }
 
 .info {
@@ -45,17 +65,42 @@
 
 .info-job {
   margin-bottom: 20px;
+  color: var(--theme-red);
+}
+
+.info-name {
+  display: inline-block;
+  padding: 3px 5px;
+  border-radius: 5px;
+  background-color: var(--theme-red);
+  color: var(--theme-white);
 }
 
 .info-period {
+  margin-top: 5px;
   margin-bottom: 15px;
+  color: var(--theme-lightgreen);
 }
 
 .info-bottom {
   height: 100px;
 }
 
+.more-info {
+  margin: 10px 0;
+  color: var(--theme-darkgreen);
+}
+
+.mark {
+  color: var(--theme-red)
+}
+
 .btn {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto 0;
+  padding: 5px 50px;
+  border: none;
+  color: var(--theme-white);
+  background-color: var(--theme-brown);
+  cursor: pointer;
 }
